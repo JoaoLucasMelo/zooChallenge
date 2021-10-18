@@ -1,6 +1,5 @@
 export class lions{
 
-_lionMealsAvaiable = 20
 
 
 constructor (name, age, lenght, typeOfFood){
@@ -14,11 +13,6 @@ constructor (name, age, lenght, typeOfFood){
   console.log('you created a lion')
 }
 
-
-haveMeal(){
-_mealsAvaiable--
-console.log(this.name + 'has had a meal and now we still have ' + _lionMealsAvaiable + ' meals avaiable')
-}
 
 }
 

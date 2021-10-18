@@ -1,6 +1,6 @@
 export class monkeys{
 
-  _monkeysMealsAvaiable = 20
+
   
   
   constructor (name, age, height, typeOfFood){
@@ -15,7 +15,7 @@ export class monkeys{
   }
   
   
-  haveMeal(){
+  monkeyHaveMeal(){
   _mealsAvaiable--
   console.log(this.name + 'has had a meal and now we still have ' + _monkeysMealsAvaiable + ' meals avaiable')
   }

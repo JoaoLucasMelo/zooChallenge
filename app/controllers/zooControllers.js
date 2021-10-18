@@ -1,24 +1,38 @@
 import { giraffes } from "../models/giraffes.js"
 import { lions } from "../models/lions.js"
 import { monkeys } from "../models/monkeys.js"
+import { snakes } from "../models/snakes.js"
+
+
+
+let _lionMealsAvaiable = 20
+let _snakesMealsAvaiable = 20
+let _monkeysMealsAvaiable = 20
+let _giraffeMealsAvaiable = 20
 
 let _lionsCage = {
-king: new lions('King', 15, 200),
-bud: new lions('Bud', 10, 170),
-kid: new lions('Kid', 3, 100)
+  king: new lions('King', 15, 200),
+  bud: new lions('Bud', 10, 170),
+  kid: new lions('Kid', 3, 100)
 }
 
 let _giraffesCage = {
   martha: new giraffes('Martha', 12, 400),
   carlos: new giraffes('Carlos', 20, 500),
   zero: new giraffes('Zero', 4, 300)
-  }
+}
 
-  let _monkeysCage = {
-    george: new monkeys('George', 25, 170),
-    pie: new monkeys('Pie', 20, 150),
-    tony: new monkeys('Tony', 6, 150)
-    }
+let _monkeysCage = {
+  george: new monkeys('George', 25, 170),
+  pie: new monkeys('Pie', 20, 150),
+  tony: new monkeys('Tony', 6, 150)
+}
+
+let _snakesCage = {
+  string: new snakes('String', 19, 250),
+  draco: new snakes('Draco', 34, 320),
+  mimi: new snakes('Mimi', 12, 200)
+}
 
 export class ZooControllers{
 
@@ -29,7 +43,6 @@ export class ZooControllers{
     let templateLion =''
     for ( let key in _lionsCage){
     let lion = _lionsCage[key]
-    console.log(lion)
     templateLion += `<li>Name: ${lion.name} - Age: ${lion.age} years - Lenght: ${lion.lenght}cm</li>`
     }
     document.getElementById('lionsList').innerHTML = templateLion
@@ -39,7 +52,6 @@ export class ZooControllers{
     let templateGiraffe =''
     for ( let key in _giraffesCage){
     let giraffe = _giraffesCage[key]
-    console.log(giraffe)
     templateGiraffe += `<li>Name: ${giraffe.name} - Age: ${giraffe.age} years - Height: ${giraffe.height}cm</li>`
     }
     document.getElementById('GiraffesList').innerHTML = templateGiraffe
@@ -49,13 +61,27 @@ export class ZooControllers{
     let templateMonkey =''
     for ( let key in _monkeysCage){
     let monkey = _monkeysCage[key]
-    console.log(monkey)
     templateMonkey += `<li>Name: ${monkey.name} - Age: ${monkey.age} years - Height: ${monkey.height}cm</li>`
     }
     document.getElementById('MonkeysList').innerHTML = templateMonkey
   }
 
+  SnakeInfo(){
+    let templateSnake =''
+    for ( let key in _snakesCage){
+    let snake = _snakesCage[key]
+    templateSnake += `<li>Name: ${snake.name} - Age: ${snake.age} years - Lenght: ${snake.lenght}cm</li>`
+    }
+    document.getElementById('SnakesList').innerHTML = templateSnake
+  }
 
+  LionFeed(){
+    _lionMealsAvaiable--
+    for ( let key in _lionsCage){
+      let lion = _lionsCage[key]
+      console.log(lion.name + ' has had a meal and now we still have ' + _lionMealsAvaiable + ' meals avaiable')
+    }
+  }
 
 
 

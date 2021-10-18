@@ -1,6 +1,6 @@
 export class giraffes{
 
-  _giraffeMealsAvaiable = 20
+
   
   
   constructor (name, age, height, typeOfFood){
@@ -15,7 +15,7 @@ export class giraffes{
   }
   
   
-  haveMeal(){
+  giraffeHaveMeal(){
   _mealsAvaiable--
   console.log(this.name + 'has had a meal and now we still have ' + _giraffeMealsAvaiable + ' meals avaiable')
   }
