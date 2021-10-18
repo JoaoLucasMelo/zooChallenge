@@ -1,26 +1,25 @@
 export class lions{
 
-_mealsAvaiable = 20
+_lionMealsAvaiable = 20
 
 
-constructor (name, age, lenght, mealsEaten){
+constructor (name, age, lenght, typeOfFood){
   this.name = name
   this.age = age
   this.lenght = lenght
   this.typeOfFood = typeOfFood
-  this.mealsEaten = mealsEaten
-  console.log('you built a gorilla')
+  this.mealsEaten = 0
+  this.alive = true
+
+  console.log('you created a lion')
 }
 
 
 haveMeal(){
 _mealsAvaiable--
-console.log(this.name + 'has had a meal and now we still have ' + _mealsAvaiable + ' meals avaiable')
+console.log(this.name + 'has had a meal and now we still have ' + _lionMealsAvaiable + ' meals avaiable')
 }
 
-draw(){
-
-  
 }
 
 
@@ -36,4 +35,3 @@ draw(){
 
 
 
-}

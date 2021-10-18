@@ -1,10 +1,12 @@
-import { zooControllers } from "./controllers/zooControllers.js"
+import { ZooControllers } from "./controllers/zooControllers.js"
 console.log('here is main')
 
 
-let ZooControllers = new zooControllers()
+let zooControllers = new ZooControllers()
 
 
 
 
-window['ZooControllers'] = ZooControllers
+
+
+window['zooController'] = zooControllers
