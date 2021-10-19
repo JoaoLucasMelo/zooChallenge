@@ -4,12 +4,6 @@ import { monkeys } from "../models/monkeys.js"
 import { snakes } from "../models/snakes.js"
 
 
-
-let _lionMealsAvaiable = 20
-let _snakesMealsAvaiable = 20
-let _monkeysMealsAvaiable = 20
-let _giraffeMealsAvaiable = 20
-
 let _lionsCage = {
   king: new lions('King', 15, 200),
   bud: new lions('Bud', 10, 170),
@@ -76,13 +70,22 @@ export class ZooControllers{
   }
 
   LionFeed(){
-    _lionMealsAvaiable--
-    for ( let key in _lionsCage){
-      let lion = _lionsCage[key]
-      console.log(lion.name + ' has had a meal and now we still have ' + _lionMealsAvaiable + ' meals avaiable')
-    }
+
+document.getElementById('lionfood').innerText = ` You fed all the Lions`
   }
+  MonkeyFeed(){
 
-
-
+document.getElementById('monkeyfood').innerText = ` You fed all the Monkeys`
 }
+SnakeFeed(){
+
+  document.getElementById('snakefood').innerText = ` You fed all the Snakes`
+  }
+  GiraffeFeed(){
+
+    document.getElementById('giraffefood').innerText = ` You fed all the Giraffes`
+    }
+
+
+
+    }

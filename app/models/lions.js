@@ -10,8 +10,12 @@ constructor (name, age, lenght, typeOfFood){
   this.mealsEaten = 0
   this.alive = true
 
-  console.log('you created a lion')
 }
+
+test(){
+  console.log(works)
+}
+
 
 
 }

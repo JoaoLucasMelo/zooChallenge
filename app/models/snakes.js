@@ -10,8 +10,7 @@ export class snakes{
     this.typeOfFood = typeOfFood
     this.mealsEaten = 0
     this.alive = true
-  
-    console.log('you created a snake')
+
   }
   
   

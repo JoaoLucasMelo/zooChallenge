@@ -11,7 +11,6 @@ export class monkeys{
     this.mealsEaten = 0
     this.alive = true
   
-    console.log('you created a monkey')
   }
   
   
